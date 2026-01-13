@@ -15,7 +15,7 @@ permissions:
   workflows: write        # run workflows
 
 env:
-  UPSTREAM_REPO: "AutoMaker-Org/automaker"  # change this to the upstream repo (owner/repo)
+  UPSTREAM_REPO: "glittercowboy/get-shit-done"  # change this to the upstream repo (owner/repo)
   BRANCH: "main"                                 # change to master or whatever branch you want to sync
 
 jobs:
