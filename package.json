@@ -1,6 +1,6 @@
 {
   "name": "get-shit-done-cc",
-  "version": "1.4.0",
+  "version": "1.9.13",
   "description": "A meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
   "bin": {
     "get-shit-done-cc": "bin/install.js"
@@ -8,7 +8,10 @@
   "files": [
     "bin",
     "commands",
-    "get-shit-done"
+    "get-shit-done",
+    "agents",
+    "hooks/dist",
+    "scripts"
   ],
   "keywords": [
     "claude",
@@ -24,7 +27,19 @@
     "type": "git",
     "url": "git+https://github.com/glittercowboy/get-shit-done.git"
   },
+  "homepage": "https://github.com/glittercowboy/get-shit-done",
+  "bugs": {
+    "url": "https://github.com/glittercowboy/get-shit-done/issues"
+  },
   "engines": {
     "node": ">=16.7.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  },
+  "scripts": {
+    "build:hooks": "node scripts/build-hooks.js",
+    "prepublishOnly": "npm run build:hooks"
   }
 }
